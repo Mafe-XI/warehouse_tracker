@@ -17,7 +17,7 @@ jobs:
         uses: dawidd6/action-download-artifact@v2
         with:
           workflow: main_ci.yml
-          name: openapi-spring-1.22.1.jar
+          name: artifact
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v13
         with:
