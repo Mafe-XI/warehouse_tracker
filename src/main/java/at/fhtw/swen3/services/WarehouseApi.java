@@ -42,7 +42,7 @@ public interface WarehouseApi {
     }
 
     /**
-     * GET /warehouse : Exports the hierarchy of Warehouse and Truck objects. 
+     * GET /warehouse : TestExports the hierarchy of Warehouse and Truck objects.
      *
      * @return Successful response (status code 200)
      *         or The operation failed due to an error. (status code 400)
@@ -50,7 +50,7 @@ public interface WarehouseApi {
      */
     @Operation(
         operationId = "exportWarehouses",
-        summary = "Exports the hierarchy of Warehouse and Truck objects. ",
+        summary = "TestExports the hierarchy of Warehouse and Truck objects. ",
         tags = { "warehouse-management" },
         responses = {
             @ApiResponse(responseCode = "200", description = "Successful response", content = {
