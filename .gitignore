@@ -1,4 +1,3 @@
 .idea/
 /openapi-spring.iml
-target/*
-!target/warehouse_tracker.jar
+target/
