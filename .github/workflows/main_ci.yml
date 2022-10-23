@@ -27,4 +27,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: artifact
-        path: target/warehouse_tracker.jar
+        path: /home/runner/work/warehouse_tracker/warehouse_tracker/target/openapi-spring-1.22.1.jar
