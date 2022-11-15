@@ -15,17 +15,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 public class WholeParcelMapperTest {
 
-    private final Parcel parcel = new Parcel(1L, LocalDateTime.now(), "Schulweg 1", "Schulweg 2", "123A", 1234);
-
     @Test
     void parcelEntityToTrackingDto() {
-        TrackingInformationDto trackingInformationDto = WholeParcelMapper.INSTANCE.parcelEntityToTrackingDto(parcel);
+        Parcel parcel = new Parcel(1L, LocalDateTime.now(), "Schulweg 1", "Schulweg 2", "123A", 1234);
 
+        TrackingInformationDto trackingInformationDto = WholeParcelMapper.INSTANCE.parcelEntityToTrackingDto(parcel);
+        System.out.println(trackingInformationDto.getTrackingNumber());
         assertEquals( 1234, trackingInformationDto.getTrackingNumber());
     }
 
     @Test
     void parcelEntityToParcelDto() {
+        Parcel parcel = new Parcel(1L, LocalDateTime.now(), "Schulweg 1", "Schulweg 2", "123A", 1234);
+
         ParcelDto parcelDto = WholeParcelMapper.INSTANCE.parcelEntityToParcelDto(parcel);
 
         assertEquals( "123A", parcelDto.getOrderNumber());
@@ -33,6 +35,8 @@ public class WholeParcelMapperTest {
 
     @Test
     void parcelEntityToNewParcelInfoDto() {
+        Parcel parcel = new Parcel(1L, LocalDateTime.now(), "Schulweg 1", "Schulweg 2", "123A", 1234);
+
         NewParcelInfoDto newParcelInfoDto = WholeParcelMapper.INSTANCE.parcelEntityToNewParcelInfoDto(parcel);
 
         assertEquals( 1L, newParcelInfoDto.getId());
@@ -54,4 +58,5 @@ public class WholeParcelMapperTest {
         assertEquals("123A", parcel.getOrderNumber());
         assertEquals( 1234, parcel.getTrackingNumber());
     }
+
 }
