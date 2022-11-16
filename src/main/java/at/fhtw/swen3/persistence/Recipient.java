@@ -33,15 +33,19 @@ public class Recipient {
   private String name;
 
   @JsonProperty("street")
+  @Pattern(regexp = "^[a-zA-Z]\\s\\d+[/a-zA-Z\\d]$", message = "Only use characters a-z, numbers, whitespaces and '/' characters")
   private String street;
 
   @JsonProperty("postalCode")
+  @Pattern(regexp = "^A-\\d{4}$", message = "Postalcode has to start with 'A-' followed by 4 digits")
   private String postalCode;
 
   @JsonProperty("city")
+  @Pattern(regexp = "^\\p{Lu}[a-zA-Z-*\\s*\\/*]*$", message = "City name has to start with an upper letter and only use a-z and '-' or '/' characters")
   private String city;
 
   @JsonProperty("country")
+  @Pattern(regexp = "Austria|Österreich")
   private String country;
 
   public Recipient name(String name) {

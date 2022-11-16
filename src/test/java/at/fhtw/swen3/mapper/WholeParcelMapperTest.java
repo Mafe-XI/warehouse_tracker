@@ -19,8 +19,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 public class WholeParcelMapperTest {
-    Recipient sender = new Recipient("Shop", "Shopping Street", "1200", "Vienna", "Austria");
-    Recipient recipient = new Recipient("Fritz", "Schulgasse 1", "4020", "Linz", "Austria");
+    Recipient sender = new Recipient("Shop", "Shopping Street", "A-1200", "Vienna", "Austria");
+    Recipient recipient = new Recipient("Fritz", "Schulgasse 1", "A-4020", "Linz", "Austria");
 
     List<HopArrival> visitedHops = new ArrayList<HopArrival>() {
         {
@@ -79,8 +79,8 @@ public class WholeParcelMapperTest {
 
         assertEquals("123456", parcel.getTrackingId());
         assertEquals(12.0f, parcel.getWeight());
-        assertEquals("1200", parcel.getSender().getPostalCode());
-        assertEquals("4020", parcel.getRecipient().getPostalCode());
+        assertEquals("A-1200", parcel.getSender().getPostalCode());
+        assertEquals("A-4020", parcel.getRecipient().getPostalCode());
         assertEquals( "InTransport", parcel.getState().getValue());
         assertEquals( "visited1", parcel.getVisitedHops().get(0).getDescription());
         assertEquals( "789", parcel.getFutureHops().get(2).getCode());
