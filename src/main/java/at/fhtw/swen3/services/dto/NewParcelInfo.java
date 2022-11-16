@@ -9,6 +9,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class NewParcelInfoDto {
+public class NewParcelInfo {
     private String trackingId;
 }

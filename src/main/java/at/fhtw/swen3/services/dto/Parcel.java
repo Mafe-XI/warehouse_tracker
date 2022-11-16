@@ -10,7 +10,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ParcelDto {
+public class Parcel {
     private Float weight;
     private Recipient sender;
     private Recipient recipient;

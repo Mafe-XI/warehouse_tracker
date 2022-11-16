@@ -1,9 +1,7 @@
 package at.fhtw.swen3.persistence.entities;
 
-import at.fhtw.swen3.persistence.entities.HopArrival;
 import at.fhtw.swen3.persistence.Recipient;
 import at.fhtw.swen3.persistence.TrackingInformation;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,8 +12,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +21,8 @@ import java.util.List;
 @Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
-public class Parcel {
+@Table(name = "parcel")
+public class ParcelEntity {
     //NewParcelInfo
     @Column
     @Id @NotNull
@@ -53,10 +50,9 @@ public class Parcel {
     @Column
     @OneToMany(cascade = CascadeType.ALL)
     @NotNull
-    private List<HopArrival> visitedHops = new ArrayList<>();
+    private List<HopArrivalEntity> visitedHops = new ArrayList<>();
     @Column
     @OneToMany(cascade = CascadeType.ALL)
     @NotNull
-    private List<HopArrival> futureHops = new ArrayList<>();
-
+    private List<HopArrivalEntity> futureHops = new ArrayList<>();
 }
