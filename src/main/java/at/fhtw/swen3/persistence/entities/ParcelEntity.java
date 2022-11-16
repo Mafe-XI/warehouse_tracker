@@ -9,7 +9,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.Valid;
-import javax.validation.constraints.Min;
+import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ public class ParcelEntity {
     private String trackingId;
     //Parcel
     @Column
-    @Min(value = 0L, message = "Weight has to be at least 0")
+    @DecimalMin(value = "0", message = "Weight has to be at least 0")
     @NotNull
     private Float weight;
     @Embedded

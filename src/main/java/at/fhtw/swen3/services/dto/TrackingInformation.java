@@ -1,6 +1,5 @@
 package at.fhtw.swen3.services.dto;
 
-import at.fhtw.swen3.persistence.TrackingInformation;
 import at.fhtw.swen3.persistence.entities.HopArrivalEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package at.fhtw.swen3.mapper;
+package at.fhtw.swen3.services.mapper;
 
 import at.fhtw.swen3.persistence.Recipient;
 import at.fhtw.swen3.persistence.entities.HopArrivalEntity;

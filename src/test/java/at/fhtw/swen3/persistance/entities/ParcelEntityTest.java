@@ -1,4 +1,4 @@
-package at.fhtw.swen3.entity;
+package at.fhtw.swen3.persistance.entities;
 
 import at.fhtw.swen3.persistence.Recipient;
 import at.fhtw.swen3.persistence.TrackingInformation;
