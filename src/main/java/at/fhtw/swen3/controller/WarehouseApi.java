@@ -3,11 +3,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-package at.fhtw.swen3.services;
+package at.fhtw.swen3.controller;
 
 import at.fhtw.swen3.persistence.Error;
 import at.fhtw.swen3.persistence.Hop;
 import at.fhtw.swen3.persistence.Warehouse;
+import at.fhtw.swen3.services.ApiUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.Parameters;
@@ -79,7 +80,7 @@ public interface WarehouseApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<>(HttpStatus.OK);
 
     }
 
@@ -123,7 +124,7 @@ public interface WarehouseApi {
                 }
             }
         });
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<>(HttpStatus.OK);
 
     }
 
@@ -155,7 +156,7 @@ public interface WarehouseApi {
     default ResponseEntity<Void> importWarehouses(
         @Parameter(name = "Warehouse", description = "", required = true) @Valid @RequestBody Warehouse warehouse
     ) {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+        return new ResponseEntity<>(HttpStatus.CREATED);
 
     }
 
