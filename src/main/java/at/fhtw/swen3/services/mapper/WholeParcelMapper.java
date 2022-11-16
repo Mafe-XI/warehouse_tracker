@@ -11,8 +11,8 @@ import org.mapstruct.factory.Mappers;
 public interface WholeParcelMapper {
     WholeParcelMapper INSTANCE = Mappers.getMapper(WholeParcelMapper.class);
 
-    TrackingInformationDto parcelEntityToTrackingDto(Parcel parcel);
-    ParcelDto parcelEntityToParcelDto(Parcel parcel);
     NewParcelInfoDto parcelEntityToNewParcelInfoDto(Parcel parcel);
+    ParcelDto parcelEntityToParcelDto(Parcel parcel);
+    TrackingInformationDto parcelEntityToTrackingDto(Parcel parcel);
     Parcel dtoToParcelEntity(NewParcelInfoDto newParcelInfoDto, ParcelDto parcelDto, TrackingInformationDto trackingInformationDto);
 }

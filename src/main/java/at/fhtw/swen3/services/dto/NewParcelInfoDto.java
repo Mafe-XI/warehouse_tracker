@@ -10,7 +10,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NewParcelInfoDto {
-    private Long id;
-    private String senderAddress;
-    private String receiverAddress;
+    private String trackingId;
 }

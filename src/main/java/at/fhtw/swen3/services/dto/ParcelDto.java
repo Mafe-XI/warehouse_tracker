@@ -1,5 +1,6 @@
 package at.fhtw.swen3.services.dto;
 
+import at.fhtw.swen3.persistence.Recipient;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,5 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ParcelDto {
-    private String orderNumber;
+    private Float weight;
+    private Recipient sender;
+    private Recipient recipient;
 }
