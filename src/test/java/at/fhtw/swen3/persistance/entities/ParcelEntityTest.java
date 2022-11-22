@@ -1,7 +1,7 @@
 package at.fhtw.swen3.persistance.entities;
 
-import at.fhtw.swen3.persistence.Recipient;
-import at.fhtw.swen3.persistence.TrackingInformation;
+import at.fhtw.swen3.services.dto.Recipient;
+import at.fhtw.swen3.services.dto.TrackingInformation;
 import at.fhtw.swen3.persistence.entities.HopArrivalEntity;
 import at.fhtw.swen3.persistence.entities.ParcelEntity;
 import org.junit.jupiter.api.Test;

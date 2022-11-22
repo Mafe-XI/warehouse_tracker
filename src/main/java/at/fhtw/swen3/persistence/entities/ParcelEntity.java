@@ -1,7 +1,7 @@
 package at.fhtw.swen3.persistence.entities;
 
-import at.fhtw.swen3.persistence.Recipient;
-import at.fhtw.swen3.persistence.TrackingInformation;
+import at.fhtw.swen3.services.dto.Recipient;
+import at.fhtw.swen3.services.dto.TrackingInformation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
