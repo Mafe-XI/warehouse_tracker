@@ -8,7 +8,7 @@ package at.fhtw.swen3.controller;
 import at.fhtw.swen3.services.dto.Error;
 import at.fhtw.swen3.services.dto.Hop;
 import at.fhtw.swen3.services.dto.Warehouse;
-import at.fhtw.swen3.services.ApiUtil;
+import at.fhtw.swen3.utility.ApiUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Content;

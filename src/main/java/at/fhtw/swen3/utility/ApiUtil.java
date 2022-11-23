@@ -1,4 +1,4 @@
-package at.fhtw.swen3.services;
+package at.fhtw.swen3.utility;
 
 import org.springframework.web.context.request.NativeWebRequest;
 

@@ -1,4 +1,4 @@
-package at.fhtw.swen3;
+package at.fhtw.swen3.utility;
 
 import com.fasterxml.jackson.databind.util.StdDateFormat;
 
