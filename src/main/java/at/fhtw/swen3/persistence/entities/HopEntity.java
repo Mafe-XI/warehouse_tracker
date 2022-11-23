@@ -15,7 +15,7 @@ import javax.validation.constraints.Pattern;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "hop")
-public class HopEntity {
+public class HopEntity implements EntityBase {
     @Column(name = "ID")
     @Id
     @GeneratedValue

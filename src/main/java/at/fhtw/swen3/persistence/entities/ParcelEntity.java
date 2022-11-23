@@ -22,7 +22,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "parcel")
-public class ParcelEntity {
+public class ParcelEntity implements EntityBase {
     //NewParcelInfo
     @Column
     @Id @NotNull
