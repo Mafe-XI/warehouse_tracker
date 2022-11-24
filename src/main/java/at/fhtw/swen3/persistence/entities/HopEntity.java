@@ -1,9 +1,6 @@
 package at.fhtw.swen3.persistence.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -14,11 +11,12 @@ import javax.validation.constraints.Pattern;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Table(name = "hop")
 public class HopEntity {
     @Column(name = "ID")
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "HOP_TYPE")

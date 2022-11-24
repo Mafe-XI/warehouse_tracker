@@ -1,9 +1,6 @@
 package at.fhtw.swen3.persistence.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
@@ -16,6 +13,7 @@ import java.time.OffsetDateTime;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Table(name = "hop_arrival")
 public class HopArrivalEntity {
     @Id @NotNull
