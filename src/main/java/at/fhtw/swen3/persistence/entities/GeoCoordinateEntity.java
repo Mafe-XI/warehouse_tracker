@@ -11,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Table(name = "geo_coordinate")
-public class GeoCoordinateEntity {
+public class GeoCoordinateEntity implements EntityBase {
     @Column(name = "ID")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -15,7 +15,7 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 @Builder
 @Table(name = "hop_arrival")
-public class HopArrivalEntity {
+public class HopArrivalEntity implements EntityBase {
     @Id @NotNull
     @Pattern(regexp = "^[A-Z]{4}\\d{1,4}$", message = "Code should be 8 characters long. First 4 characters should be A-Z and last 4 should be numbers")
     private String code;

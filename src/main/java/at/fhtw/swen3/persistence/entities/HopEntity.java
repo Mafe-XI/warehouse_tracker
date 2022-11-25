@@ -13,7 +13,7 @@ import javax.validation.constraints.Pattern;
 @NoArgsConstructor
 @Builder
 @Table(name = "hop")
-public class HopEntity {
+public class HopEntity implements EntityBase {
     @Column(name = "ID")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
