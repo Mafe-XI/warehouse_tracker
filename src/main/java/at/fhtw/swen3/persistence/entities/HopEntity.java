@@ -1,6 +1,7 @@
 package at.fhtw.swen3.persistence.entities;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -11,7 +12,7 @@ import javax.validation.constraints.Pattern;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
+@SuperBuilder
 @Table(name = "hop")
 public class HopEntity implements EntityBase {
     @Column(name = "ID")
