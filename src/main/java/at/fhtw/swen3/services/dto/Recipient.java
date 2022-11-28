@@ -4,6 +4,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Embeddable;
@@ -20,6 +21,7 @@ import javax.annotation.Generated;
 @Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @JsonTypeName("recipient")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-10-17T06:37:45.751189Z[Etc/UTC]")
 public class Recipient {
