@@ -1,11 +1,8 @@
 package at.fhtw.swen3.persistence.entities;
 
-import at.fhtw.swen3.persistence.Recipient;
-import at.fhtw.swen3.persistence.TrackingInformation;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import at.fhtw.swen3.services.dto.Recipient;
+import at.fhtw.swen3.services.dto.TrackingInformation;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -21,8 +18,9 @@ import java.util.List;
 @Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Table(name = "parcel")
-public class ParcelEntity {
+public class ParcelEntity implements EntityBase {
     //NewParcelInfo
     @Column
     @Id @NotNull

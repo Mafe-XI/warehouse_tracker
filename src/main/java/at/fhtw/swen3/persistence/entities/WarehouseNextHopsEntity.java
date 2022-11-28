@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 @Entity
 @Table(name = "WAREHOUSE_NEXT_HOPS")
-public class WarehouseNextHopsEntity {
+public class WarehouseNextHopsEntity implements EntityBase {
     @Column(name = "ID")
     @Id
     private Long id;

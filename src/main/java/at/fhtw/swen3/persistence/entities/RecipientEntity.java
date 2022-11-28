@@ -12,10 +12,10 @@ import javax.validation.constraints.Pattern;
 @Builder
 @Entity
 @Table(name = "recipient")
-public class RecipientEntity {
+public class RecipientEntity implements EntityBase {
     @Column(name = "ID")
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "NAME")

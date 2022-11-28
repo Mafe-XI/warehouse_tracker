@@ -1,13 +1,7 @@
 package at.fhtw.swen3.services.mapper;
 
-import at.fhtw.swen3.persistence.Recipient;
+import at.fhtw.swen3.services.dto.Recipient;
 import at.fhtw.swen3.persistence.entities.HopArrivalEntity;
-import at.fhtw.swen3.persistence.entities.ParcelEntity;
-import at.fhtw.swen3.services.dto.NewParcelInfo;
-import at.fhtw.swen3.services.dto.Parcel;
-import at.fhtw.swen3.services.dto.TrackingInformation;
-import at.fhtw.swen3.services.mapper.ParcelMapper;
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.OffsetDateTime;
@@ -39,7 +33,7 @@ public class ParcelMapperTest {
 
 //    @Test
 //    void parcelEntityToNewParcelInfoDto() {
-//        ParcelEntity parcel = new ParcelEntity("123456", 12.0f, sender, recipient, at.fhtw.swen3.persistence.TrackingInformation.StateEnum.INTRANSPORT, visitedHops, futureHops);
+//        ParcelEntity parcel = new ParcelEntity("123456", 12.0f, sender, recipient, at.fhtw.swen3.services.dto.TrackingInformation.StateEnum.INTRANSPORT, visitedHops, futureHops);
 //
 //        NewParcelInfo newParcelInfoDto = ParcelMapper.INSTANCE.parcelEntityToNewParcelInfoDto(parcel);
 //
@@ -48,7 +42,7 @@ public class ParcelMapperTest {
 //
 //    @Test
 //    void parcelEntityToParcelDto() {
-//        ParcelEntity parcel = new ParcelEntity("123456", 12.0f, sender, recipient, at.fhtw.swen3.persistence.TrackingInformation.StateEnum.INTRANSPORT, visitedHops, futureHops);
+//        ParcelEntity parcel = new ParcelEntity("123456", 12.0f, sender, recipient, at.fhtw.swen3.services.dto.TrackingInformation.StateEnum.INTRANSPORT, visitedHops, futureHops);
 //
 //        Parcel parcelDto = ParcelMapper.INSTANCE.parcelEntityToParcelDto(parcel);
 //
@@ -59,7 +53,7 @@ public class ParcelMapperTest {
 //
 //    @Test
 //    void parcelEntityToTrackingDto() {
-//        ParcelEntity parcel = new ParcelEntity("123456", 12.0f, sender, recipient, at.fhtw.swen3.persistence.TrackingInformation.StateEnum.INTRANSPORT, visitedHops, futureHops);
+//        ParcelEntity parcel = new ParcelEntity("123456", 12.0f, sender, recipient, at.fhtw.swen3.services.dto.TrackingInformation.StateEnum.INTRANSPORT, visitedHops, futureHops);
 //
 //        TrackingInformation trackingInformationDto = ParcelMapper.INSTANCE.parcelEntityToTrackingDto(parcel);
 //
@@ -72,7 +66,7 @@ public class ParcelMapperTest {
 //    void dtoToParcelEntity() {
 //        NewParcelInfo newParcelInfoDto = new NewParcelInfo("123456");
 //        Parcel parcelDto = new Parcel(12.0f, sender, recipient);
-//        TrackingInformation trackingInformationDto = new TrackingInformation(at.fhtw.swen3.persistence.TrackingInformation.StateEnum.INTRANSPORT, visitedHops, futureHops);
+//        TrackingInformation trackingInformationDto = new TrackingInformation(at.fhtw.swen3.services.dto.TrackingInformation.StateEnum.INTRANSPORT, visitedHops, futureHops);
 //
 //        ParcelEntity parcel = ParcelMapper.INSTANCE.dtoToParcelEntity(newParcelInfoDto, parcelDto, trackingInformationDto);
 //
