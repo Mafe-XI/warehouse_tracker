@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+//@RequiredArgsConstructor
 @Builder
 @Table(name = "geo_coordinate")
 public class GeoCoordinateEntity implements EntityBase {
